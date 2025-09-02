@@ -6,13 +6,12 @@ public class MyFrame extends JFrame{
     MyFrame(){
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(null);
-
-        calc.setBounds(10, 10, 400, 400); // Set bounds for the CalcButton panel
-        this.add(calc);
-        
-        this.setSize(450, 450); 
-       //setSize(width, height)-if layout is null
+        this.setTitle("Calculator");
+        this.setLayout(new BorderLayout());
+        this.add(calc, BorderLayout.CENTER);
+        this.pack();
+        this.setLocationRelativeTo(null); // Center on screen
         this.setVisible(true);
     }
 }
+
